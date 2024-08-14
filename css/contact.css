@@ -1,0 +1,131 @@
+.min-head {
+    width: 100%;
+    height: 200px;
+    background-color: #ffce00;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.min-head .overlay {
+    background: rgba(101, 0, 27, 0.32);
+}
+
+.min-head h2 {
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    text-transform: capitalize;
+    top: 60px;
+}
+
+.about-us {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    padding: 30px;
+}
+
+.about-us h2 {
+    text-align: center;
+    padding: 20px 0;
+    color: #ba0737;
+    font-family: Poppins-Semibold;
+    letter-spacing: 0.3px;
+    font-size: 20px;
+}
+
+.about-us .container {
+    padding: 0 100px;
+}
+
+.about-us .container p {
+    font-size: 15px;
+    text-align: center;
+    font-family: Poppins-Light;
+    letter-spacing: 0.8px;
+}
+
+.contact {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    padding: 30px;
+}
+
+.contact h2 {
+    text-align: center;
+    padding: 20px 0;
+    color: #ba0737;
+    font-family: Poppins-Semibold;
+}
+
+.contact .container {
+    width: inherit;
+    height: auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    border-top: 1px solid #ba0737;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contact .container p {
+    display: block;
+    width: 90%;
+    margin: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    border-left: 2px solid #ba0737;
+    padding-left: 20px;
+    font-family: Poppins-Semibold;
+}
+
+.contact .container i {
+    width: 40px;
+    height: 40px;
+    padding: 15px;
+    border-radius: 50px;
+    background: #ddd;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 0px) and (max-width: 750px) {
+    .min-head h2 {
+        color: #fff;
+        font-size: 36px;
+        text-align: center;
+        width: 100%;
+        z-index: 1;
+        position: relative;
+        text-transform: capitalize;
+        top: 60px;
+    }
+
+    .about-us .container {
+        padding: 0px;
+    }
+
+    .about-us .container p {
+        font-size: 13px;
+        text-align: left;
+        font-family: Poppins-Light;
+        letter-spacing: 0.8px;
+    }
+
+    .contact .container {
+        width: 100%;
+        height: auto;
+        padding: 0px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        border-top: 1px solid #ba0737;
+    }
+
+}

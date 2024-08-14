@@ -1,0 +1,36 @@
+.slideright{
+    animation-name: slideInRight;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
+
+.slideleft{
+    animation-name: slideInLeft;
+    animation-duration: 2s;
+}
+
+.slideup{
+    animation-name: slideInUp;
+    animation-duration: 2s;
+    animation-play-state: running;
+}
+
+.slidedown{
+    animation-name: slideInDown;
+    animation-duration: 3s;
+}
+
+.fadein{
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+.fadeout{
+    animation-name: fadeOut;
+    animation-duration: 2s;
+   }
+
+.bounce{
+    animation-name: bounce;
+    animation-duration: 2s;
+   }

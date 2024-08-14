@@ -1,0 +1,621 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@font-face {
+    font-family: Poppins-Semibold;
+    src: url(font/poppins/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Light;
+    src: url(font/poppins/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: Poppins-ExtraBold;
+    src: url(font/poppins/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(font/montserrat/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: Tiemann;
+    src: url(font/Tiemann/Tiemann-Regular.ttf);
+}
+
+@font-face {
+    font-family: Futura;
+    src: url(font/Futura/Futura.ttf);
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #f7f7f7;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #3e3e3e;
+    border-radius: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+h1 {
+    text-align: left;
+    font-size: 50px;
+    color: #3e3e3e;
+    font-family: Tiemann;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: left;
+    font-size: 20px;
+    color: #3e3e3e;
+    font-family: Tiemann;
+    margin-bottom: 10px;
+}
+
+h3 {
+    text-align: left;
+    font-size: 20px;
+    color: #3e3e3e;
+    font-family: Tiemann;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: left;
+    font-size: 12px;
+    color: #3e3e3e;
+    font-family: Poppins-Light;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+
+li {
+    text-align: center;
+    font-size: 13px;
+    color: #5c5c5c;
+    font-family: Futura;
+    margin-bottom: 10px;
+}
+
+a {
+    outline-style: none;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn {
+    width: 180px;
+    height: 40px;
+    position: relative;
+    display: block;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(40deg, #ba0737, #ff1c59);
+    font-family: Poppins-Semibold;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 2.5px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.24);
+}
+
+.btn-yellow {
+    background-image: linear-gradient(90deg, #ffa700, #ff9d00);
+}
+
+.btn-yellow:hover {
+    background: #ba0737;
+}
+
+.heading {
+    width: 100%;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    background-image: url(../img/logo%20watermark%20bw.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 20px 0 20px rgba(0, 0, 0, 0.1);
+    z-index: 9;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.heading nav {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.heading .logo {
+    width: 150px;
+    height: 50px;
+    background-image: url(../img/logo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 10px 30px;
+}
+
+.heading nav ul {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 600px;
+}
+
+.heading nav ul button {
+    position: relative;
+    background: #3e3e3e;
+    color: #fff;
+    width: 100px;
+    height: 80px;
+    font-size: 9px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 15px;
+    letter-spacing: 3px;
+    padding: 0 10px;
+    font-family: Poppins-Semibold;
+}
+
+.heading nav button:hover {
+    background: #ffa700;
+    color: #ffffff;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    cursor: pointer;
+}
+
+.heading nav ul li {
+    list-style: none;
+    margin: 20px 10px;
+    ;
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    padding: 10px;
+    color: #3e3e3e;
+    text-transform: uppercase;
+    font-family: Poppins-Semibold;
+}
+
+.heading nav ul li:hover {
+    animation-name: pulse;
+    animation-duration: 1s;
+    border-bottom: 3px solid #ba0737;
+}
+
+.active {
+    border-bottom: 3px solid #ba0737;
+}
+
+.hero-slide {
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    background-color: #3e3e3e;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 530px;
+    padding: 0px;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+.hero-slide .overlay {
+    background: rgba(0, 0, 0, 0);
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-slide .container {
+    height: auto;
+    position: absolute;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0);
+    top: 100px;
+    left: 100px;
+    z-index: 1;
+    animation-name: slideInLeft;
+    animation-duration: 2s;
+}
+
+.hero-slide h2 {
+    position: relative;
+    color: #fff;
+    font-size: 54px;
+    text-align: left;
+    line-height: 60px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    padding: 10px 0;
+    text-transform: capitalize;
+    animation-name: pulse;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.hero-slide .btn {
+    width: 180px;
+    height: 40px;
+    position: relative;
+    display: block;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(40deg, #ba0737, #ff1c59);
+    font-family: Poppins-Semibold;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 2.5px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.24);
+}
+
+.hero-slide .btn:hover {
+    background-image: linear-gradient(40deg, #ff1c59, #ba0737);
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+}
+
+.divide {
+    width: 100%;
+    height: auto;
+    background-color: #3e3e3e;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 0px;
+    z-index: 2;
+}
+
+.countup {
+    width: 100%;
+    height: 5px;
+    background: #ba0737;
+    position: relative;
+}
+
+.countdown {
+    width: 100%;
+    height: 5px;
+    background: #ba0737;
+    position: absolute;
+    bottom: 0;
+}
+
+.divide .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    width: 760px;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.divide .stats .card {
+    width: 90%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+.divide .stats .card span {
+    color: #fff;
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.divide .stats .card span:hover {
+    font-size: 50px;
+    color: #ffc2d3;
+    animation-name: pulse;
+    animation-duration: 3s;
+}
+
+.divide .stats .card h2 {
+    width: 80%;
+    text-align: center;
+    color: #fff;
+    background-image: linear-gradient(40deg, #ba0737, #ff1c59);
+    padding: 10px 0;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: Poppins-Semibold;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.divide .stats .card h2:hover {
+    background: #fff;
+    color: #ba0737;
+    cursor: pointer;
+    animation-name: pulse;
+    animation-duration: 1s;
+    letter-spacing: 3px;
+}
+
+.exe-msg {
+    padding: 15px;
+    top: 30px;
+    right: 0;
+    position: fixed;
+    background-image: linear-gradient(50deg, rgba(248, 0, 124, 0.9), rgba(224, 2, 2, 0.9));
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 100;
+}
+
+.exe-log {
+    width: 300px;
+    padding: 15px;
+    top: 100px;
+    right: 0;
+    position: relative;
+    background-image: linear-gradient(50deg, rgba(248, 0, 124, 0.9), rgba(224, 2, 2, 0.9));
+    color: #fff;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    text-align: center;
+    z-index: 100;
+}
+
+.section {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    background: #f5f5f5;
+}
+
+.section .container {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+}
+
+.section .container h2 {
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    color: #ba0737;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-family: Poppins-Semibold;
+}
+
+.section .container p {
+    font-size: 12px;
+    word-spacing: 1px;
+    text-align: justify;
+    font-family: Poppins-Semibold;
+}
+
+.section .container .writeup .action {
+    display: flex;
+    padding: 20px 0;
+}
+
+.section .container .writeup .action button {
+    margin-right: 10px;
+}
+
+.section .container strong {
+    font-size: 17px;
+    color: #ba0737;
+}
+
+.divide-col-6 {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+
+}
+
+.gallery {
+    width: 95%;
+    height: 100%;
+    position: relative;
+    margin-right: 0;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.gallery img {
+    position: relative;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    object-position: top;
+    animation-name: pulse;
+    animation-duration: 3s;
+}
+
+.gallery img:hover {
+    border: 4px solid #fff;
+    animation-name: pulse;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.promo-ads {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    background-image: url(../img/slide3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 4;
+}
+
+.promo-ads .overlay {
+    position: absolute;
+    background: rgba(62, 62, 62, 0.84);
+}
+
+.promo-ads .container {
+    width: 100%;
+    padding: 50px 100px;
+    z-index: 1;
+    
+}
+
+.promo-ads h2 {
+    color: #fff;
+    font-size: 35px;
+    letter-spacing: 3px;
+    font-family: Futura;
+}
+
+.promo-ads p {
+    color: #fff;
+    font-size: 25px;
+    font-family: Poppins-Light;
+}
+
+.promo-ads form {
+    display: flex;
+}
+
+.promo-ads form button {
+    height: 45px;
+    width: 100px;
+    text-align: center;
+    color: #fff;
+    background: #ba0737;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    position: relative;
+    font-family: Poppins-Semibold;
+}
+
+.promo-ads form button:hover {
+    height: 45px;
+    width: 100px;
+    bottom: 3px;
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.41);
+}
+
+.promo-ads input {
+    border-radius: 20px 0 0px 20px;
+    width: 400px;
+    padding-left: 20px;
+    font-family: Poppins-Semibold;
+}
+
+.section .container .partners {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    margin-right: auto;
+    margin-left: auto;
+    width: 700px;
+}
+
+.section .container .partners img {
+    box-shadow: none;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.section .container .partners img:hover{
+    object-fit: contain;
+    cursor: pointer
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+    padding: 26px 0;
+    background-image: linear-gradient(40deg, #ba0737, #d60039);
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer p {
+    color: #fff;
+    font-size: 13px;
+    letter-spacing: 0.1px;
+    text-align: center;
+    width: 100%;
+    font-family: Poppins-Semibold;
+}
+
+.footer .icons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer .icons i {
+    width: 30px;
+    color: #fff;
+}

@@ -1,0 +1,32 @@
+.loader{
+    background-color: #be00f7;
+    background-image: url(../img/bg-load.png);
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    z-index: 400;
+    cursor: progress;
+    overflow: hidden;
+}
+
+.loader img{
+    display: block;
+    width: 80px;
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@media (min-width: 0px) and (max-width: 850px) {
+    
+.loader img{
+    width: 50px;
+    left:50%;
+    top: 50%;
+}
+}
